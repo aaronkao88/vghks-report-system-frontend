@@ -80,6 +80,7 @@
 
 /* 個案資訊 */
 .patienttext {
+  position: relative;
   font-weight: 700;
   font-size: 16px;
   color: #21468d;
@@ -129,7 +130,7 @@ thead {
 .q-table__container {
   margin: 20px auto;
   width: 620px;
-  height: 281px;
+  height: 381px;
   background-color: #f7f9ff;
 }
 .q-table thead,

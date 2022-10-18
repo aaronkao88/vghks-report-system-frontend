@@ -20,7 +20,6 @@
 import SystemTitle from "@/components/System/SystemTitle.vue";
 import SystemList from "@/components/System/SystemList.vue";
 import SystemInfo from "@/components/System/SystemInfo.vue";
-
 export default {
   components: {
     SystemTitle,

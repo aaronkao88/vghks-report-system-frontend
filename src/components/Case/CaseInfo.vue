@@ -25,9 +25,7 @@
                   <div class="text-weight-bold nowstep">目前進度</div>
                 </div>
                 <div class="col">
-                  <div class="text-weight-bold nowstepstatus">
-                    1 等待檢驗資料
-                  </div>
+                  <div class="text-weight-bold nowonstep">1 等待檢驗資料</div>
                 </div>
               </div>
               <!-- 健檢類別 -->
@@ -87,7 +85,7 @@
                   <div class="text-weight-light step">生理數據</div>
                 </div>
                 <div class="col">
-                  <div class="text-weight-light step nonupdate">尚未更新</div>
+                  <div class="text-weight-light step download">完成</div>
                 </div>
               </div>
               <!-- 階段二 -->
@@ -98,9 +96,14 @@
                 <div class="col">
                   <div class="text-weight-light step nonstep">風險評估報告</div>
                 </div>
-                <div class="col">
-                  <div class="text-weight-light step nonstep nonupdate">
-                    尚未更新
+                <div class="row">
+                  <div class="col">
+                    <div class="text-weight-light step download">
+                      <a class="download" href="#">點我下載</a>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <img src="@/assets/clouds-upload-green.png" />
                   </div>
                 </div>
               </div>
@@ -112,12 +115,18 @@
                 <div class="col">
                   <div class="text-weight-light step nonstep">整合後報告</div>
                 </div>
-                <div class="col">
-                  <div class="text-weight-light step nonstep nonupdate">
-                    等待資料中
+                <div class="row">
+                  <div class="col">
+                    <div class="text-weight-light step download">
+                      <a class="download" href="#">點我下載</a>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <img src="@/assets/clouds-upload-green.png" />
                   </div>
                 </div>
               </div>
+
               <!-- 階段四 -->
               <div class="row">
                 <div class="col">
@@ -126,9 +135,14 @@
                 <div class="col">
                   <div class="text-weight-light step nonstep">影音報告書</div>
                 </div>
-                <div class="col">
-                  <div class="text-weight-light step nonstep nonupdate">
-                    尚未更新
+                <div class="row">
+                  <div class="col">
+                    <div class="text-weight-light step download">
+                      <a class="download" href="#">點我下載</a>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <img src="@/assets/clouds-upload-green.png" />
                   </div>
                 </div>
               </div>
@@ -224,6 +238,15 @@
   position: relative;
   top: 2px;
   font-size: 14px;
+}
+.nowonstep {
+  color: #26c700;
+  font-size: 17px;
+}
+.download {
+  font-size: 20px;
+  color: #26c700;
+  font-weight: 300;
 }
 .caseinfo {
   font-size: 14px;

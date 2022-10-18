@@ -1,44 +1,53 @@
 <template>
   <div class="patient">
-    <q-card flat bordered class="my-card-2">
-      <q-card-section>
-        <div>
-          <div class="text-h6 text-list">
-            個案清單
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            搜尋：
-            <q-btn-dropdown id="pg-sd" color="white text-black" label="病歷號">
-              <q-list>
-                <q-item clickable v-close-popup @click="onItemClick">
-                  <q-item-section>
-                    <q-item-labsel>病歷號</q-item-labsel>
-                  </q-item-section>
-                </q-item>
+    <div class="row">
+      <q-card flat bordered class="my-card-2">
+        <q-card-section>
+          <div>
+            <div class="col-6 col-md-4 text-h6 text-list">
+              個案清單
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              搜尋：
+              <q-btn-dropdown
+                class="col-6 col-md-4"
+                id="pg-sd"
+                color="white text-black"
+                label="病歷號"
+              >
+                <q-list>
+                  <q-item clickable v-close-popup @click="onItemClick">
+                    <q-item-section>
+                      <q-item-labsel onclick="medicalnum()"
+                        >病歷號</q-item-labsel
+                      >
+                    </q-item-section>
+                  </q-item>
 
-                <q-item clickable v-close-popup @click="onItemClick">
-                  <q-item-section>
-                    <q-item-label>身分證字號</q-item-label>
-                  </q-item-section>
-                </q-item>
-              </q-list>
-            </q-btn-dropdown>
+                  <q-item clickable v-close-popup @click="onItemClick">
+                    <q-item-section>
+                      <q-item-label onclick="idnumber()"
+                        >身分證字號</q-item-label
+                      >
+                    </q-item-section>
+                  </q-item>
+                </q-list>
+              </q-btn-dropdown>
+            </div>
+
+            <!-- 個案清單 -->
+            <q-table
+              class="my-sticky-header-table"
+              :rows="rows"
+              :columns="columns"
+              title-class="text-bold text-blue-9"
+              table-style="background-color: #F7F9FF; color: #21468D;"
+              table-header-style="height: 65px; background-color: #D3DEFF; color: #21468D;"
+            />
           </div>
-
-          <!-- 個案清單 -->
-          <q-table
-            :rows="rows"
-            :columns="columns"
-            row-key="name"
-            v-model:pagination="pagination"
-            title-class="text-bold text-blue-9"
-            table-style="background-color: #F7F9FF; color: #21468D;"
-            table-header-style="height: 65px; background-color: #D3DEFF; color: #21468D;"
-          />
-          <q-btn unelevated rounded color="primary" label="檢視" />
-        </div>
-      </q-card-section>
-    </q-card>
+        </q-card-section>
+      </q-card>
+    </div>
   </div>
 </template>
 
@@ -84,7 +93,6 @@ thead {
 </style>
 
 <script>
-import { ref } from "vue";
 // API
 import { getPatientList } from "@/api/patient";
 
@@ -203,8 +211,6 @@ export default {
     return {
       columns,
       rows,
-
-      search: ref(""),
     };
   },
 };

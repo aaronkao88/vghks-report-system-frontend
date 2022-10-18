@@ -21,6 +21,13 @@
                   color="primary"
                   label="查看所有案件"
                 />
+                <q-btn
+                  unelevated
+                  rounded
+                  class="q-mt-lg"
+                  color="primary"
+                  label="查看此筆案件"
+                />
               </div>
 
               <!-- 更多資訊 -->

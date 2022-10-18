@@ -20,7 +20,6 @@
 import PatientInfo from "@/components/Patient/PatientInfo.vue";
 import PatientTitle from "@/components/Patient/PatientTitle.vue";
 import PatientList from "@/components/Patient/PatientList.vue";
-
 export default {
   components: {
     PatientTitle,

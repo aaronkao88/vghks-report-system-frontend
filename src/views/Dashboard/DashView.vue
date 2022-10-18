@@ -1,13 +1,10 @@
 <template>
   <div class="q-pa-md">
     <div class="row justify-center">
-      <div class="col-9">
-        <DashView></DashView>
+      <div class="col-8 col-lg-6">
+        <Dashboard></Dashboard>
 
-        <div class="col-9">
-          <PS></PS>
-        </div>
-        <div class="col-4">
+        <div class="q-mt-lg col-4 col-lg-6">
           <allcase></allcase>
         </div>
       </div>
@@ -16,14 +13,12 @@
 </template>
 
 <script>
-import DashView from "@/components/Dashboard/MyCard.vue";
-import PS from "@/components/Dashboard/ProGress.vue";
+import Dashboard from "@/components/Dashboard/MyCard.vue";
 import allcase from "@/components/Dashboard/AllCase.vue";
 
 export default {
   components: {
-    DashView,
-    PS,
+    Dashboard,
     allcase,
   },
 };

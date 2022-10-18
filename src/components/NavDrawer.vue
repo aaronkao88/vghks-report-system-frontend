@@ -72,7 +72,7 @@
   border-radius: 0 20px 20px 0;
 }
 a {
-  margin: 4px 0;
+  margin: 6px 0;
   text-decoration: none;
   font-weight: 600;
   font-size: 21px;
